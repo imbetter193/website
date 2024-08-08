@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chess App</title>
+    <style>
+        .board {
+            display: grid;
+            grid-template-columns: repeat(8, 50px);
+            grid-template-rows: repeat(8, 50px);
+            border: 2px solid #333;
+        }
+        .square {
+            width: 50px;
+            height: 50px;
+            box-sizing: border-box;
+        }
+        .square:nth-child(odd) {
+            background-color: #eee;
+        }
+        .square:nth-child(even) {
+            background-color: #ddd;
+        }
+        .piece {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="board" id="board"></div>
+    <script>
+        // Create the board
+        function createBoard() {
+            const board = document.getElementById('board');
+            let squareColor = false;
+            
+            for (let i = 0; i < 64; i++) {
+                const square = document.createElement('div');
+                square.className = 'square';
+                
+                if (squareColor) {
+                    square.classList.add('black');
+                }
+                
+                if (i % 8 === 0) {
+                    squareColor = !squareColor;
+                }
+
+                board.appendChild(square);
+            }
+        }
+
+        // Add pieces to the board
+        function addPieces() {
+            const board = document.getElementById('board');
+            const pieces = [
+                'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r', // Black pieces
+                'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p', // Black pawns
+                '', '', '', '', '', '', '', '', // Empty squares
+                '', '', '', '', '', '', '', '', // Empty squares
+                '', '', '', '', '', '', '', '', // Empty squares
+                '', '', '', '', '', '', '', '', // Empty squares
+                'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P', // White pawns
+                'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'  // White pieces
+            ];
+
+            const squares = board.getElementsByClassName('square');
+
+            for (let i = 0; i < 64; i++) {
+                const piece = pieces[i];
+                if (piece) {
+                    const pieceElement = document.createElement('div');
+                    pieceElement.className = 'piece';
+                    pieceElement.innerText = piece;
+                    squares[i].appendChild(pieceElement);
+                }
+            }
+        }
+
+        createBoard();
+        addPieces();
+    </script>
+</body>
+</html>

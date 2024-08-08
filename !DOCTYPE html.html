@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A large HTML document example with complex structure and various elements.">
+    <title>Large HTML Document Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            margin: 1rem 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .main-content {
+            float: left;
+            width: 70%;
+            padding: 1rem;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar {
+            float: right;
+            width: 30%;
+            padding: 1rem;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            clear: both;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 0.5rem;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .code-block {
+            background-color: #f4f4f4;
+            border-left: 4px solid #333;
+            padding: 1rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        .code-block pre {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Large HTML Document Example</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <h2 id="home">Home</h2>
+            <p>This is a large HTML document designed to include a variety of elements. It contains text, images, tables, forms, and even embedded code snippets.</p>
+
+            <h2 id="about">About</h2>
+            <p>In this section, we provide information about the purpose of this document and the various elements it includes. This is a placeholder text to demonstrate a large amount of content.</p>
+
+            <h3>Subsection Example</h3>
+            <p>Here is some additional content to fill out the subsection. More text is used here to make the document longer.</p>
+
+            <h2 id="services">Services</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Service 1</td>
+                        <td>Description of Service 1</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>
+                        <td>Service 2</td>
+                        <td>Description of Service 2</td>
+                        <td>$200</td>
+                    </tr>
+                    <tr>
+                        <td>Service 3</td>
+                        <td>Description of Service 3</td>
+                        <td>$300</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 id="contact">Contact</h2>
+            <p>If you have any questions, please reach out using the contact form below.</p>
+
+            <form action="/submit" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+
+            <div class="code-block">
+                <h3>Code Example</h3>
+                <pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Example&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>Recent Posts</h3>
+            <ul>
+                <li><a href="#">Post 1</a></li>
+                <li><a href="#">Post 2</a></li>
+                <li><a href="#">Post 3</a></li>
+            </ul>
+
+            <h3>Archives</h3>
+            <ul>
+                <li><a href="#">August 2024</a></li>
+                <li><a href="#">July 2024</a></li>
+                <li><a href="#">June 2024</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Large HTML Document Example. All rights reserved.</p>
+    </footer>
+</body>
+</html>
